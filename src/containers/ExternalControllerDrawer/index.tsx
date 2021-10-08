@@ -38,31 +38,7 @@ export default function ExternalController () {
             onClose={() => setIdentity(true)}
             onOk={handleOk}
         >
-            <Alert type="info" inside={true}>
-                <p>{t('externalControllerSetting.note')}</p>
-            </Alert>
-            <div className="flex items-center">
-                <span className="md:my-3 w-14 my-1 font-bold">{t('externalControllerSetting.host')}</span>
-                <Input
-                    className="md:my-3 flex-1 my-1"
-                    align="left"
-                    inside={true}
-                    value={value.hostname}
-                    onChange={hostname => set('hostname', hostname)}
-                    onEnter={handleOk}
-                />
-            </div>
-            <div className="flex items-center">
-                <div className="md:my-3 w-14 my-1 font-bold">{t('externalControllerSetting.port')}</div>
-                <Input
-                    className="md:my-3 w-14 my-1 flex-1"
-                    align="left"
-                    inside={true}
-                    value={value.port}
-                    onChange={port => set('port', port)}
-                    onEnter={handleOk}
-                />
-            </div>
+
             <div className="flex items-center">
                 <div className="md:my-3 w-14 my-1 font-bold">{t('externalControllerSetting.secret')}</div>
                 <Input
